@@ -1,0 +1,21 @@
+18)	Write a python program for Depth First Search Traversal
+
+d={'A':['B','C'],
+'B':['D','E'],
+'C':['F','G'],
+'D':[],
+'E':[],
+'F':['H','I'],
+'G':[],
+'H':[],
+'I':[]}
+visited=set()
+
+def bfs(d,visited,node):
+	if node not in visited:
+		print(node)
+		visited.add(node)
+		for neigh in d[node]:
+			bfs(d,visited,neigh)
+print("BFS=>")
+bfs(d,visited,'A')
