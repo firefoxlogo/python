@@ -1,0 +1,34 @@
+14)	Write a python program for list operation 
+# To create list
+list1 = [1,2,3,4]
+print("List: ", list1)
+# Convert into list 
+name = "HvDesai"
+list2 = list(name)
+print(f"{name} converted into list : {list2}")
+# get length of the list using len() function
+list3 = [1,3,4,5,6,7,8]
+print(f"Length of the list: {len(list3)}")
+# check the type of the list using type() function
+print(f"Type of the list: {type(list3)}")
+# A list with strings, integers and boolean values:
+list4 = [1,3, 'name', True]
+list1 = ["Amit", "Tejas", "Sahil", "Yash"]
+# Access Items
+print(list1[2]) # O/p = Sahil
+# Adding element in list using append()
+list1.append("Avi")
+print(list1)
+# Removing last element from the list
+list1.pop()
+print(list1)
+# To insert a list item at a specified index, use the insert() method.
+list1.insert(2, "Sam")
+print(list1)
+# The remove() method removes the specified item.
+list1.remove("Sam")
+print(list1)
+# Sort the list
+list1 = [4,1,2,9,3]
+list1.sort()
+print(list1)
