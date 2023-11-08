@@ -1,0 +1,7 @@
+1)	Write a python program that accept number from user and check it is even or odd
+
+a=int(input())
+if (a%2)==0:
+	print("Even");
+else:
+	print("Odd");
