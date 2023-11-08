@@ -1,0 +1,52 @@
+12)	Write a python program for addition of two matrices
+
+print("enter detail of 1st matrix")
+r1=int(input("Enter no of rows: "))
+c1=int(input("Enter no of coloumns: "))
+m1=[]
+for i in range (0,r1):
+	t=[]
+	for j in range (0,c1):
+		ele=int(input("enter no.-> "))
+		t.append(ele)
+	m1.append(t)
+print("enter detail of 2nd matrix")
+r2=int(input("Enter no of rows: "))
+c2=int(input("Enter no of coloumns: "))
+m2=[]
+
+for i in range (0,r2):
+	t=[]
+	for j in range (0,c2):
+		ele=int(input("enter no.-> "))
+		t.append(ele)
+	m2.append(t)
+print("first matrix->")
+for i in range(0,r1):
+	for j in range (0,c1):
+		print(m1[i][j],end=" ")
+	print("")
+
+print("second matrix->")
+for i in range(0,r2):
+	for j in range (0,c2):
+		print(m2[i][j],end=" ")
+	print("")
+
+if (r1==r2 and c1==c2):
+	r3=r1
+	c3=c1
+	m3=[]
+	for i in range (0,r1):
+		t=[]
+		for j in range (0,c1):
+				t.append(m1[i][j]+m2[i][j])
+		m3.append(t)
+		
+	print("Result of Addition")
+	for i in range (0,r3):
+		for j in range (0,c3):
+			print(m3[i][j],end=" ")
+		print("")
+else:
+	print("Addition is not possibles")
