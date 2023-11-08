@@ -1,0 +1,13 @@
+
+5)	Write a python program that accept number from user and check it is Armstrong or not
+n=int(input())
+s=0
+t=n
+while (n>0):
+	d=n%10
+	s=s+(d**3)
+	n=n//10
+if (t==s):
+	print("no is amstrong")
+else :
+	print("no is not amstrong")
