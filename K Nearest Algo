@@ -1,0 +1,31 @@
+20)	Write a python program for K-Nearest Neighbour algorithm
+
+import pandas as pd
+import numpy as nm
+import matplotlib.pyplot as mtp
+
+data=pd.read_csv("user_data1.csv")
+print(data)
+
+x=data.iloc[:,2:4].values
+y=data.iloc[:,4].values
+
+from sklearn.model_selection import train_test_split
+xtrain,xtest,ytrain,ytest=train_test_split(x,y,test_size=0.25)
+
+from sklearn.preprocessing import StandardScaler
+
+sc=StandardScaler()
+xtrain=sc.fit_transform(xtrain)
+xtest=sc.transform(xtest)
+
+from sklearn.neighbors import KNeighborsClassifier
+reg1=KNeighborsClassifier(n_neighbors=5)
+reg1.fit(xtrain,ytrain)
+
+ypred=reg1.predict(xtest)
+
+from sklearn.metrics import confusion_matrix
+
+cs=confusion_matrix(ytest,ypred)
+print(cs)
