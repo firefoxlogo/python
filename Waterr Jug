@@ -1,0 +1,19 @@
+19)	Write a python program for Water jug Problem
+
+from collections import defaultdict
+jug1=int(input("enter 1stvalue:"))
+jug2=int(input("enter 2nd value:"))
+aim=int(input("enter  aim value:"))
+visited=defaultdict(lambda:False)
+def wj(x,y):
+	if((x==0 and y==aim) or (x==aim and y==0)):
+		print(x,y)
+		return True
+	if(visited[(x,y)]==False):
+		print(x,y)
+		visited[(x,y)]=True
+		return (wj(x,0) or wj(0,y) or wj(x,jug2) or wj(jug1,y) or wj(x+min(y,jug1-x),y-min(y,jug1-x)) or wj(x-min(x,jug2-y),y+min(x,jug2-y)))
+	else:
+		return False
+print("wj Steps")
+wj(0,0)
