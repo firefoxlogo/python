@@ -1,0 +1,35 @@
+16)	Write a python program for simple chatbot
+
+
+from datetime import date
+from datetime import datetime
+import math
+dict1={"date":"","time":"","sqrt":"","sqr":"","fine":"I am also fine How can I help you"}
+print("Hi my self ABC chat my version 1.0 ")
+n=input("Whats your name=>")
+print("Hi {} How are you".format(n))
+print("How can I help you")
+print("I can provide service")
+for i in dict1.keys():
+    print(i)
+while(1):
+    n=input("Enter your question")
+    if n in dict1.keys():
+        if(n=="date"):
+            print("Today is=>",date.today())
+        if(n=="time"):
+            now=datetime.now()
+            print("Current time is=>", now.strftime("%H:%M:%S"))
+        if(n=="sqrt"):
+            m=int(input("Enter number=>"))
+            print("sqrt of {} is {}".format(m,math.sqrt(m)))
+        if(n=="sqr"):
+            m=int(input("Enter number=>"))
+            print("sqr of {} is {}".format(m,m*m))
+        if(n=="fine"):
+            print(dict1[n])
+    else:
+        print("Unable to understand your question")
+        print("I can provide service")
+        for i in dict1.keys():
+            print(i)
