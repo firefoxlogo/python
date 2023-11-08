@@ -1,0 +1,35 @@
+15)	Write python program for set operation 
+
+# Create a Set:
+thisset = {"apple", "banana", "cherry"}
+print(thisset)
+# Find length of the set using len() function
+print(len(thisset))
+# Add an item to a set, using the add() method:
+thisset = {"apple", "banana", "cherry"}
+thisset.add("orange")
+print(thisset)
+# Add elements from tropical into thisset:
+thisset = {"apple", "banana", "cherry"}
+tropical = {"pineapple", "mango", "papaya"}
+thisset.update(tropical)
+print(thisset)
+# Remove "banana" by using the remove() method:
+thisset = {"apple", "banana", "cherry"}
+thisset.remove("banana")
+print(thisset)
+# Set intersection() Method
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+z = x.intersection(y)
+print(z)
+# Set union() Method
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+z = x.union(y)
+print(z)
+# Set issubset() Method
+x = {"a", "b", "c"}
+y = {"f", "e", "d", "c", "b", "a"}
+z = x.issubset(y)
+print(z)
