@@ -1,0 +1,51 @@
+25)	Write a program to play tic-tac-toe game (Game theory)
+
+board=["-","-","-","-","-","-","-","-","-",]
+
+def printb():
+	print(board[0]+"|"+board[1]+"|"+board[2])
+	print("-"*6)
+	print(board[3]+"|"+board[4]+"|"+board[5])
+	print("-"*6)
+	print(board[6]+"|"+board[7]+"|"+board[8])
+	
+def start():
+	player='X'
+	go=False
+	while not go:
+		printb()
+		take_turn(player)
+		result=game_over()
+		if result=="WIN":
+			
+			print(player+"win")
+			gp=True
+		if result=="Tie":
+			
+			print("Tie")
+			go=True
+		else:
+			if player=="X":
+				player="O"
+			else:
+				player="X"
+				
+def game_over():
+	if(board[0]==board[1]==board[2]!="-")or(board[3]==board[4]==board[5]!="-")or(board[6]==board[7]==board[8]!="-")or(board[0]==board[3]==board[6]!="-")or(board[1]==board[4]==board[7]!="-")or(board[2]==board[5]==board[8]!="-")or(board[0]==board[4]==board[8]!="-")or(board[2]==board[4]==board[6]!="-"):
+  		return "WIN"
+	if "-" not in board:
+		return"Tie"
+	else:
+		return "play"
+	
+def take_turn(player):
+	pos=input("enter position between1-9:-")
+	while pos not in["1","2","3","4","5","6","7","8","9"]:
+		pos=input("enter valid position:-")
+	pos=int(pos)-1
+	while board[pos]!="-":
+		pos=input("enter  new position between1-9:-")
+	board[pos]=player
+	
+	
+start()
