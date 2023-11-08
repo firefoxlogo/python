@@ -1,0 +1,26 @@
+22)	Write a python program for Random Forest Algorithm
+
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+
+data = pd.read_csv('salaries.csv')
+print(data)
+
+
+x = data.iloc[:, 1:2].values
+y = data.iloc[:, 2].values
+
+print(x)
+print(y)
+
+from sklearn.ensemble import RandomForestRegressor
+ 
+# create regressor object
+regressor = RandomForestRegressor(n_estimators=100,
+                                  random_state=0)
+ 
+# fit the regressor with x and y data
+regressor.fit(x, y)
+
+print(regressor.predict([[6.5]]))
