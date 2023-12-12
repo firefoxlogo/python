@@ -1,14 +1,14 @@
-17)	Write a python program for Breadth First search Traversal 
+d = {
+    '1': ['2', '3'],
+    '2': ['4'],
+    '3': ['2'],
+    '4': ['6','5'],
+    '5': ['3','7'],
+    '6': ['3'],
+    '7': ['6'],
+    
+}
 
-d={'A':['B','C'],
-'B':['D','E'],
-'C':['F','G'],
-'D':[],
-'E':[],
-'F':['H','I'],
-'G':[],
-'H':[],
-'I':[]}
 visited=[]
 queue=[]
 def bfs(d,visited,node):
@@ -22,4 +22,4 @@ def bfs(d,visited,node):
 				visited.append(neigh)
 				queue.append(neigh)
 print("BFS=>")
-bfs(d,visited,'D')
+bfs(d,visited,'1')
